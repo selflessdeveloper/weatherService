@@ -3,7 +3,11 @@ const form = document.querySelector('form');
 form.addEventListener('submit', (e) => {
     e.preventDefault();
     const errorOrDescription = document.querySelector('#errorOrDescription');
-    errorOrDescription.textContent = 'Fetching Results. Please wait'
+    const actualTemperature = document.querySelector('#actualTemperature');
+    const feelsLike = document.querySelector('#feelsLike');
+    errorOrDescription.textContent = 'Fetching Results. Please wait';
+    actualTemperature.textContent = '';
+    feelsLike.textContent = '';
 
     const inputElement = document.querySelector('input');
     let inputAddress = inputElement.value;
