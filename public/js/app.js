@@ -7,7 +7,7 @@ form.addEventListener('submit', (e) => {
 
     const inputElement = document.querySelector('input');
     let inputAddress = inputElement.value;
-    fetch(`http://localhost:3000/weather?address=${inputAddress}`).then((response) => {
+    fetch(`/weather?address=${inputAddress}`).then((response) => {
         response.json().then((data) => {
             const errorOrDescriptionElement = document.querySelector('#errorOrDescription');
             const actualTemperatureElement = document.querySelector('#actualTemperature');

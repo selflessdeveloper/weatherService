@@ -4,6 +4,7 @@ const mapBox = require('./utils/mapBoxService');
 const weather = require('./utils/weatherStackService');
 const express = require('express');
 const hbs = require('hbs');
+const port = process.env.PORT || 3000;
 console.log(__dirname);
 console.log(path.join(__dirname, '../public'));
 const app = express();
@@ -66,6 +67,6 @@ app.get('*', (req, res) => {
     res.render('error', { 'title': 'Page not found' });
 })
 
-app.listen(3000, () => {
-    console.log('Server is up and running on port 3000');
+app.listen(port, () => {
+    console.log('Server is up and running on port '+port);
 })
